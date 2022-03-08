@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "My css",
+    "version": "0.0.1",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "icons": {
+        "128": "512.png"
+    },
+    "browser_action": {
+        "default_icon": "512.png",
+        "default_popup": "/html/popup.html",
+        "default_title": "My css"
+    },
+    "content_scripts": [
+        {
+          "matches": [
+            "<all_urls>",
+            "http://electrobaza.client/*"
+          ],
+          "js": ["/js/content.js"],
+          "all_frames": true
+        }
+    ],
+    "permissions": [
+      "cookies",
+      "background",
+      "tabs",
+      "http://*/*",
+      "https://*/*",
+      "storage",
+      "unlimitedStorage"
+    ]
+  }
