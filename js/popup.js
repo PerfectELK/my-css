@@ -2,7 +2,7 @@ const app = new Vue({
     el: '#app',
     data() {
         return {
-            apiHost: 'https://electrobaza.client:8000',
+            apiHost: 'https://perfect-elk.ru',
             authToken: null,
             activeSiteHost: null,
             parentTabId: null,
@@ -11,10 +11,11 @@ const app = new Vue({
     },
     computed: {
         isActivateFrame() {
-            if (this.authToken === null) {
-                return false
-            }
-            if (this.authToken === false || this.authToken === undefined) {
+            if (
+                this.authToken === false || 
+                this.authToken === undefined ||
+                this.authToken === 'undefined'
+                ) {
                 return true
             }
             return false

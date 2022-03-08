@@ -1,6 +1,6 @@
 function getConfig() {
   return {
-    apiHost: 'https://electrobaza.client:8000'
+    apiHost: 'https://perfect-elk.ru'
   }
 }
 
